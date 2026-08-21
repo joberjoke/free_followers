@@ -81,10 +81,8 @@ function genBio(){
 let n=document.getElementById('name').value || "Creator";
 document.getElementById('bioResult').innerHTML=`🚀 ${n} | Chennai 📍<br>Daily tips + value<br>👇 Latest Reel`;
 }
-let c1=0,t1=1247;
-setInterval(()=>{if(c1<t1){c1+=17;if(c1>t1)c1=t1;document.getElementById('count1').innerText=c1;}},30);
-let c2=0,t2=350;
-setInterval(()=>{if(c2<t2){c2+=3;if(c2>t2)c2=t2;document.getElementById('count2').innerText=c2;}},40);
+document.getElementById('count1').innerText=1247;
+document.getElementById('count2').innerText=350;
 genTags();
 </script>
 </body>
