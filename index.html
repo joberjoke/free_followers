@@ -1,17 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Free Followers - Grow Organically</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Followers - Grow Organically 2026</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family: -apple-system, BlinkMacSystemFont, sans-serif;}
+body{background:#0a0a0a;color:white;}
+.header{padding:20px;text-align:center;background:linear-gradient(135deg,#833ab4,#fcb045,#fd1d1d);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero{text-align:center;padding:60px 20px;}
+.hero h1{font-size:2.8rem;background:linear-gradient(90deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.2;}
+.hero p{color:#aaa;margin-top:15px;font-size:1.1rem;}
+.btn{background:white;color:black;padding:14px 28px;border-radius:30px;text-decoration:none;font-weight:bold;display:inline-block;margin-top:25px;}
+.card{background:#1a1a1a;border:1px solid #333;border-radius:16px;padding:20px;margin:20px;}
+.card h3{margin-bottom:10px;}
+input,select{width:100%;padding:12px;border-radius:10px;border:1px solid #333;background:#111;color:white;margin-top:10px;}
+.tag{display:inline-block;background:#222;border:1px solid #333;padding:6px 12px;border-radius:20px;margin:5px;font-size:13px;color:#feda75;}
+.footer{text-align:center;padding:40px;color:#555;font-size:13px;}
+</style>
 </head>
-<body style="font-family: sans-serif; text-align:center; padding:50px;">
-<h1>🚀 Grow Real Followers</h1>
-<p>No bots. No fake. 100% organic growth checklist.</p>
-<a href="#checklist"><button>View 30-Day Plan</button></a>
-<ul style="text-align:left; max-width:400px; margin:20px auto;">
-<li>Optimize bio with keywords</li>
-<li>Post 4 Reels per week</li>
-<li>Use 3 small + 3 medium hashtags</li>
-<li>Reply to all comments in first 60 mins</li>
-</ul>
+<body>
+
+<div class="header"><h2>free_followers</h2></div>
+
+<div class="hero">
+<h1>Grow Real Followers<br>Without Fake Bots</h1>
+<p>Trusted by creators in Chennai, Coimbatore & all over India.<br>Organic growth checklist + tools — 2026 edition.</p>
+<a class="btn" href="#tools">🚀 Start Growing</a>
+<p style="margin-top:15px;color:#666;font-size:12px;">⚠️ No fake followers. No password needed. 100% safe & organic.</p>
+</div>
+
+<div class="card" id="tools">
+<h3>🔥 Hashtag Generator</h3>
+<select id="niche" onchange="genTags()">
+<option value="fashion">Fashion</option>
+<option value="gaming">Gaming</option>
+<option value="fitness">Fitness</option>
+<option value="food">Food</option>
+<option value="travel">Travel</option>
+</select>
+<div id="tags" style="margin-top:15px;"></div>
+</div>
+
+<div class="card">
+<h3>✨ Bio Generator</h3>
+<input type="text" id="name" placeholder="Your name / niche eg: Gamer" oninput="genBio()">
+<p id="bioResult" style="margin-top:15px;color:#aaa;"></p>
+</div>
+
+<div class="card">
+<h3>📊 Why Organic > Fake?</h3>
+<p style="color:#aaa;line-height:1.6;font-size:14px;">
+Fake followers = low reach + ban risk. Instagram detects bots in 2026.<br><br>
+Real followers = Brand deals + Explore page + Long term money.<br>
+This repo gives you daily 30-min tasks to grow 100-300 real followers/week.
+</p>
+</div>
+
+<div class="footer">
+Built with ❤️ by joberjoke | github.com/joberjoke/free_followers<br>
+Open source - star the repo ⭐
+</div>
+
+<script>
+const data={
+fashion:["#ootdindia","#chennaifashion","#styleinspo","#indianwear","#fashionblogger"],
+gaming:["#indiangamer","#bgmiindia","#gamingreels","#freefireindia","#pcgaming"],
+fitness:["#chennaifitness","#desifitness","#gymmotivation","#indianfitness","#fatloss"],
+food:["#chennaifood","#indianfood","#foodreels","#streetfoodindia","#homemade"],
+travel:["#chennaitravel","#indiantravel","#tamilnadutourism","#travelreels","#incredibleindia"]
+};
+function genTags(){
+let n=document.getElementById('niche').value;
+let out="";
+data[n].forEach(t=>out+=`<span class="tag">${t}</span>`);
+document.getElementById('tags').innerHTML=out;
+}
+function genBio(){
+let n=document.getElementById('name').value || "Creator";
+document.getElementById('bioResult').innerHTML=`🚀 ${n} | Chennai 📍<br>Daily tips + value<br>👇 Latest Reel`;
+}
+genTags();
+</script>
 </body>
-</html>
+  </html>
